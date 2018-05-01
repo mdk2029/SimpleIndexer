@@ -52,11 +52,12 @@ Finally, once we have the full index we then need to extract the top `N` words. 
 
 ### Building
 
-Works only on linux. Look at the `CMakeLists.txt` file. Should build on a modern linux box off the bat. Uses `boost` and `google-test`
+Works only on linux. Look at the `CMakeLists.txt` file. Should build on a modern linux box off the bat. Uses `boost` and the `googletest` unit testing framework.
 
 ### Testing
 
 Writing *useful* unit tests for multithreaded code requires some infrastructure support. This toy program has the following approach:
+
     * Googletest based  unit tests for the individual components that do not exercise the threading aspects
     * Design the components so that they can be invoked synchronously as well as asynchronously. So now we can run the system in two modes and compare the results
     * Write a python script to build the index and compare the python results with the cpp results
