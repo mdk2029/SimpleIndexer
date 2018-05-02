@@ -9,7 +9,6 @@
 #include <boost/filesystem.hpp>
 #include <boost/scope_exit.hpp>
 #include "Utility.h"
-#include "tests/Tests.h"
 #include "DirectoryTraverser.h"
 #include "MMapWorkItem.h"
 #include "IndexingWorkQueue.h"
